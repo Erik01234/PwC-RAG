@@ -9,7 +9,7 @@ import json
 ##ADJUSTABLE PARAMETERS##
 filename = "1706.03762v7.pdf"
 #In this case, it can be replaced with any PDF
-embeddingModel = SentenceTransformer("../models/qwen/Qwen3-Embedding-0.6B")
+embeddingModel = SentenceTransformer("Qwen/Qwen3-Embedding-0.6B")
 #Load the embedding model
 chunkS = 500
 #Preferred chunk size
@@ -66,4 +66,5 @@ if __name__ == "__main__":
 
     faiss.write_index(index, "faiss_index/chunk_index.faiss")
     print("FAISS saved")
+
     #Write FAISS to disk
